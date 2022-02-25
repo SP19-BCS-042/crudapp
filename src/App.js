@@ -1,14 +1,15 @@
+// import Sami from "./components/Sami"
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-// import About from "./components/About";
+import About from "./components/About";
 import { useState } from "react";
 import Alert from "./components/Alert";
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 
 function App() {
@@ -89,26 +90,32 @@ const redToggle = () => {
 
   return (
   <>
-  {/* <Router> */}
-    <Navbar title= "Cosmatics" aboutText="Contact Us" link="Sign Up" mode={mode} toggleMode={toggle} greenMode={greenMode} toggleGreenMode={greenToggle} redMode={redMode} toggleRedMode={redToggle}/>
+  <Router>
+    <Navbar title= "Cosmatics" aboutText="Contact Us" link="About" mode={mode} toggleMode={toggle} greenMode={greenMode} toggleGreenMode={greenToggle} redMode={redMode} toggleRedMode={redToggle}/>
 
     <Alert alert={alert}/>
        
     <div className="container">
-          {/* <Switch>
+          <Switch>
 
-              <Route path="/about">
-                <About />
+
+          <Route path="/About">
+                <About/>
               </Route>
-
-              <Route path="/"> */}
+            
+              <Route path="/">
                 <TextForm showAlert={showAlert} mode={mode} toggleMode={toggle}/>
-              {/* </Route>
+                {/* <Sami/> */}
+              </Route>
+              
+         
+          </Switch>
+
           
-          </Switch> */}
+
     </div>
 
-    {/* </Router> */}
+    </Router>
     </>
     );
 

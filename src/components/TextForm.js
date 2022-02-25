@@ -59,13 +59,13 @@ export default function TextForm(props) {
         <button type="button" className="btn btn-primary mx-2 my-2" onClick={clickedlow}>LowerCase</button>        
         <button type="button" className="btn btn-primary mx-2 my-2" onClick={clearedText}>Clear Text</button>
         <button type="button" className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy Text</button>
-        <button type="button" className="btn btn-primary mx-2 my-2" onClick={handleRemove}>Remove Spaces</button>
+        <button type="button" className="btn btn-primary mx-2 my-2" onClick={handleRemove}>Remove Spaces</button> 
 
 
 
     <div className="container" style={{color: props.mode ==="light"? "black": "white"}} >
         <h1>Your text summery</h1>
-        <p> {text.split(" ").length} words and {text.length} characters</p>
+        <p> {text.split(" ").length-1} words and {text.length} characters</p>
         <p> {0.008 * text.split(" ").length} minutes required to read the {text.split(" ").length} words </p>
 
         <h1>Preview:</h1>
